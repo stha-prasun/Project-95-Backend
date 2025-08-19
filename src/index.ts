@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import { CorsOptions } from "cors";
 import connectDB from "./config/database";
+import messageRoute from "./routes/messageRoute";
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ const corsOption: CorsOptions = {
 app.use(cors(corsOption));
 
 // Routes
+app.use("/api/v1/message", messageRoute);
 
 // Start server
 const PORT = process.env.PORT || 5000;

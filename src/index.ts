@@ -15,7 +15,7 @@ app.use(express.json());
 
 //cors
 const corsOption: CorsOptions = {
-  origin: "https://project-95.vercel.app/",
+  origin: "https://project-95.vercel.app",
   credentials: true,
 };
 app.use(cors(corsOption));

@@ -15,7 +15,7 @@ app.use(express.json());
 
 //cors
 const corsOption: CorsOptions = {
-  origin: "http://localhost:5173",
+  origin: "https://project-95.vercel.app/",
   credentials: true,
 };
 app.use(cors(corsOption));

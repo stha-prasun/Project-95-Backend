@@ -39,3 +39,22 @@ export const sendMessage = async (
     });
   }
 };
+
+export const getAllMessage = async (
+  req: Request<{}, {}, {}>,
+  res: Response
+): Promise<Response> => {
+  try {
+    const messages = await Message.find();
+
+    return res.status(200).json({
+      messages,
+    });
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({
+      message: "Internal server error",
+      success: false,
+    });
+  }
+};

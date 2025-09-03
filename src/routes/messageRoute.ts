@@ -5,6 +5,6 @@ const router: Router = Router();
 
 router.post("/send", sendMessage);
 
-router.get("/", getAllMessage);
+router.get("/get/all", getAllMessage);
 
 export default router;
